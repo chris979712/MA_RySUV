@@ -174,7 +174,7 @@
           },
           {
             "position": {
-              "x": 546,
+              "x": 526,
               "y": 230
             },
             "size": {
@@ -280,6 +280,126 @@
             "data": {
               "type": "tm.Process",
               "name": "Frontend",
+              "description": "Representa la interfaz gráfica con la que el usuario interactúa.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 791,
+              "y": 230
+            },
+            "size": {
+              "width": 110,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Backend"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "0d79308e-b759-4706-8654-af3fe0161ed3"
+                },
+                {
+                  "group": "right",
+                  "id": "08a73c0f-7dbd-4e79-8123-205cede3369e"
+                },
+                {
+                  "group": "bottom",
+                  "id": "e4e0cee6-5941-41e3-b930-66149267b335"
+                },
+                {
+                  "group": "left",
+                  "id": "636e9615-e7c1-437c-957a-89dba8399b62"
+                }
+              ]
+            },
+            "id": "09619a17-3794-46d8-92d4-aa94490bc934",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "Backend",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
