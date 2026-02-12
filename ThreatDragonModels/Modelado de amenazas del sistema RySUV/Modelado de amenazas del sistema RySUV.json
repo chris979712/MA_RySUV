@@ -1,0 +1,16 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Modelado de amenazas del sistema RySUV",
+    "owner": "Christopher Vasquez Zapata",
+    "description": "El sistema RySUV fue diseñado para llevar el registro para la evaluación del personal de la Universidad Veracruzana, con la finalidad de agilizar el proceso que se lleva actualmente.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
