@@ -1,0 +1,16 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Modelado de Amenazas del sistema RySUV",
+    "owner": "Christopher Vasquez Zapata",
+    "description": "El sistema RySUV fue",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Álvaro Vallejo Carmona",
+    "threatTop": 0
+  }
+}
