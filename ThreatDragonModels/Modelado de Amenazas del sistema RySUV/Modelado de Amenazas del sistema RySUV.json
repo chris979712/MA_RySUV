@@ -489,6 +489,68 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Petición \nbackend-Base de datos",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Petición \nbackend-Base de datos"
+            ],
+            "id": "0dac280e-d255-409d-949f-e60326ae4090",
+            "source": {
+              "x": 970,
+              "y": 300
+            },
+            "target": {
+              "cell": "41b6630b-999c-44a8-be85-c69717dbe284",
+              "port": "09ab0d32-e685-438e-9ef6-1b9716cf201a"
+            },
+            "vertices": [
+              {
+                "x": 1070,
+                "y": 240
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
               "x": 530,
               "y": 240
@@ -889,52 +951,6 @@
                 "y": 340
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 15,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "8901b5ed-d6b9-4704-82ff-61c16519e02c",
-            "source": {
-              "x": 940,
-              "y": 400
-            },
-            "target": {
-              "cell": "41b6630b-999c-44a8-be85-c69717dbe284",
-              "port": "09ab0d32-e685-438e-9ef6-1b9716cf201a"
-            }
           }
         ],
         "description": "Diagrama que contiene el flujo general del sistema RySUV"
