@@ -31,8 +31,8 @@
                 "text": "Usuario"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -129,9 +129,47 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": true,
-              "threats": []
+              "threats": [
+                {
+                  "id": "eab44309-8617-4b00-afd2-e9f09b9d0e22",
+                  "title": "Suplantación de identidad",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un usuario mal intencionado, intenta hacerse pasar por un usuario del sistema, utilizando ataques de fuerza bruta o diccionario.",
+                  "mitigation": "1.- Implementar autenticación de doble factor\n2.- Limitar el número de intentos de inicio de sesión fallidos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "8"
+                },
+                {
+                  "id": "2962c5af-dc75-4ec6-9195-e37da3c75e71",
+                  "title": "Intento de obtención de contraseñas",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Un usuario malicioso, mediante ataques de ingeniería social intenta obtener las credenciales de un usuario registrado en el sistema.",
+                  "mitigation": "1.- Capacitar al personal y concientizar el hecho de no compartir contraseñas",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -268,7 +306,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -289,13 +328,58 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "68dbba61-8ea9-4293-9a55-7192c9d9b2c9",
+                  "title": "Ataque de denegación de servicios",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Un usuario mal intencionado intenta realizar varias peticiones por minuto con la finalidad de tirar los servicios de la página web.",
+                  "mitigation": "1.- Implementar un balanceador de carga.\n2.- Bloquear las direcciones IP que realicen más de 40 peticiones por minuto.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "5"
+                },
+                {
+                  "id": "431f96f8-58fd-48b7-8c22-cb2faceb9afb",
+                  "title": "Man in the middle",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Un usuario mal intencionado es capaz de leer e interceptar las peticiones web entre el usuario y página web, con la finalidad de robar, leer o modificar información.",
+                  "mitigation": "1.- Cifrar la conexión HTTP a HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "10"
+                },
+                {
+                  "id": "2f36a3e3-4167-42eb-bedd-665732024d78",
+                  "title": "Cross site scripting",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un usuario malicioso intenta realizar un ataque cross site scripting con la finalidad de obtener información o acceder a  páginas donde no cuenta con el acceso, a través de la inyección de código Javascript",
+                  "mitigation": "1.- Sanitizar entradas proveídas por el usuario.\n2.- Validar los datos ingresados por el usuario.\n3.- Validar privilegios al navegar entre páginas web del sistema. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "7"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 1,
+                "denialOfService": 4
+              }
             },
             "labels": [
               "Interacción\nusuario-frontend"
@@ -311,7 +395,7 @@
             },
             "vertices": [
               {
-                "x": 400,
+                "x": 390,
                 "y": 270
               },
               {
@@ -324,7 +408,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -345,13 +430,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "633e7533-ac8a-476e-b2c3-8da13aa38bfd",
+                  "title": "Man in the middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un usuario mal intencionado es capaz de leer e interceptar las peticiones web entre el usuario y página web, con la finalidad de robar, leer o modificar información.",
+                  "mitigation": "1.- Cifrar la conexión HTTP a HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "10"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Respuesta \nfrontend-usuario"
@@ -367,7 +471,7 @@
             },
             "vertices": [
               {
-                "x": 480,
+                "x": 490,
                 "y": 330
               },
               {
@@ -380,7 +484,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -401,13 +506,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "da5bae7e-8967-46d7-aa95-f34f0be77350",
+                  "title": "Man in the middle",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Un usuario mal intencionado es capaz de leer e interceptar las peticiones web entre el usuario y página web, con la finalidad de robar, leer o modificar información.",
+                  "mitigation": "1.- Cifrar la conexión HTTP a HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Petición\nfrontend-backen"
@@ -436,7 +560,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -457,13 +582,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "cd1c908c-f45c-4fae-88a7-322f5ee559fa",
+                  "title": "Man in the middle",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Un usuario mal intencionado es capaz de leer e interceptar las peticiones web entre el usuario y página web, con la finalidad de robar, leer o modificar información.",
+                  "mitigation": "1.- Cifrar la conexión HTTP a HTTPS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Respuesta\nbackend-frontend"
@@ -476,6 +620,21 @@
             "target": {
               "cell": "baefeab5-2ee5-457d-becd-00b2b27f6f33",
               "port": "08a73c0f-7dbd-4e79-8123-205cede3369e"
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             },
             "vertices": [
               {
@@ -492,7 +651,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -513,13 +673,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "4b042f57-057f-493c-b121-e3a84cd00ffb",
+                  "title": "Man in the middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un usuario malicioso intenta intervenir en las solicitudes realizadas entre el backend con la base de datos, exponiendo las peticiones realizadas para obtener información o alterarla.",
+                  "mitigation": "1.- Cifrar la conexión a la base de datos usando TLS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 4,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Petición \nbackend-Base de datos"
@@ -535,20 +714,90 @@
             },
             "vertices": [
               {
-                "x": 1070,
+                "x": 1000,
+                "y": 240
+              },
+              {
+                "x": 1170,
                 "y": 240
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Respuesta\nBase de datos - Backend",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "45e6ecbe-0f1b-4844-9844-03f8e08f4659",
+                  "title": "Man in the middle",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un usuario malicioso intenta intervenir en las solicitudes realizadas entre el backend con la base de datos, exponiendo las peticiones realizadas para obtener información o alterarla.",
+                  "mitigation": "1.- Cifrar la conexión a la base de datos usando el protocolo TLS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8"
+                }
               ],
-              "name": null
-            }
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Respuesta\nBase de datos - Backend"
+            ],
+            "id": "1718d950-4d2e-4f2f-9d06-378a3e356a61",
+            "source": {
+              "cell": "41b6630b-999c-44a8-be85-c69717dbe284",
+              "port": "09ab0d32-e685-438e-9ef6-1b9716cf201a"
+            },
+            "target": {
+              "cell": "09619a17-3794-46d8-92d4-aa94490bc934",
+              "port": "08a73c0f-7dbd-4e79-8123-205cede3369e"
+            },
+            "vertices": [
+              {
+                "x": 1150,
+                "y": 340
+              },
+              {
+                "x": 1020,
+                "y": 340
+              }
+            ]
           },
           {
             "position": {
@@ -564,8 +813,8 @@
                 "text": "Frontend"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -662,12 +911,99 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "7a6081f7-513b-4b87-a149-30c9ecae3054",
+                  "title": "Robo de cookies ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Un usuario mal intencionado intenta robar las cookies de la sesión de un usuario.",
+                  "mitigation": "1.- Evitar incluir datos sensibles dentro de las cookies de los usuarios\n2.- Cifrar los datos almacenados dentro de las cookies de usuario",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "8"
+                },
+                {
+                  "id": "db9d2c97-552e-4e52-a165-2a6d6631c9de",
+                  "title": "Inyección SQL",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un usuario malicioso intenta ejecutar sentencias SQL desde la interfaz gráfica con la finalidad de modificar, alterar, eliminar o consultar datos desde las entradas de usuario como campos de texto, combobox, fechas, etc.",
+                  "mitigation": "1.- Validar las entradas de los datos ingresados por el usuario.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "8"
+                },
+                {
+                  "id": "0a7dbad4-d68f-4eca-b01d-3c59517455e7",
+                  "title": "Cross site request forgery",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Un usuario malicioso realiza un ataque CSRF con la finalidad de engañar a un usuario autenticado, realizando acciones no deseadas en una aplicación web; enviando solicitudes una aplicación web confiable.",
+                  "mitigation": "1.- Uso de tokens CSRF en formularios y solicitudes\n2.- Verificación del encabezado Origin\n3.- Validación de datos ingresados por el usuario\n4.- Reforzar el uso de fetch",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "8"
+                },
+                {
+                  "id": "9bbd6180-9391-45f2-83a9-7c34d1ca214c",
+                  "title": "DNS Hijacking",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Las solicitudes realizadas al servidor son redireccionadas a un sitio web fraudulento para poder hacer phishing.",
+                  "mitigation": "1.- Utilizar un proveedor DNS que sea confiable\n2.- Monitorear los cambios de registros en DNS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8"
+                },
+                {
+                  "id": "5ff25d2a-de12-4e07-8100-6a1679912930",
+                  "title": "Escalar privilegios",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Un usuario logra acceder a páginas o usuarios de alto privilegio, debido a la configuración de navegabilidad en el sitio web.",
+                  "mitigation": "1.- Manejar la interfaz de acuerdo al usuario correspondiente.\n2.- Administrar de forma correcta los privilegios y acciones que los usuarios pueden hacer en el sistema.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "2"
+                },
+                {
+                  "id": "4b33afa8-c164-4b79-ad33-17cd0af1725d",
+                  "title": "Exposición de credenciales.",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Los archivos de configuración, claves y variables de entorno se encuentran en texto plano.",
+                  "mitigation": "1.- Cifrar los secretos y archivos de configuración.\n2.- Restringir los permisos de lectura.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 2
+              }
             }
           },
           {
@@ -684,8 +1020,8 @@
                 "text": "Backend"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -782,17 +1118,91 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
-              "isWebApplication": false,
+              "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3abe0e36-e9fe-4884-9cbf-5a62b30099d2",
+                  "title": "Exposición de credenciales",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Los archivos de configuración, claves y variables de entorno se encuentran en texto plano.",
+                  "mitigation": "1.- Cifrar los secretos y archivos de configuración\n2.- Restringir los permisos de lectura.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "5"
+                },
+                {
+                  "id": "bb161017-1b6a-4440-87be-1e3318d0abed",
+                  "title": "Path traversal",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un usuario malicioso intenta acceder a los archivos a través de la inserción de comandos que permitan navegar entre rutas de la carpeta del backend.",
+                  "mitigation": "1.- Validar los datos ingresados por el usuario\n2.- Limitar los permisos de acceso a carpetas del sistema.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "5"
+                },
+                {
+                  "id": "59e9409b-14a9-46cb-b03d-67a938a38c01",
+                  "title": "DNS Hijacking",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Las solicitudes realizadas al servidor son redireccionadas a un sitio web fraudulento para poder hacer phishing.",
+                  "mitigation": "1.- Utilizar un proveedor DNS que sea confiable\n2.- Monitorear los cambios de registros en DNS",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "8"
+                },
+                {
+                  "id": "65b5ff20-4cf9-40b9-b2c5-ad57f3f0bc50",
+                  "title": "Denegación de servicios",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Un usuario mal intencionado intenta realizar varias peticiones por minuto con la finalidad de tirar los servicios de la API Rest.",
+                  "mitigation": "1.- Implementar un balanceador de carga.\n2.- Bloquear las direcciones IP que realicen más de 40 peticiones por minuto.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "8"
+                },
+                {
+                  "id": "a09311b2-d249-4185-97a6-c95021551022",
+                  "title": "Ejecución de funcionalidades de alto privilegio",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Un usuario de bajo privilegio intenta ejecutar funciones de usuario de alto privilegio, con la finalidad de atentar contra la integridad del sistema.",
+                  "mitigation": "1.- Utilizar middlewares que validen los permisos de usuario.\n2.- Limitar el uso de las rutas a usuarios de poco privilegio.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 5,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
             "position": {
-              "x": 1132,
+              "x": 1222,
               "y": 260
             },
             "size": {
@@ -804,11 +1214,13 @@
                 "text": "DataBase"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -905,13 +1317,72 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": true,
               "storesInventory": true,
-              "threats": []
+              "threats": [
+                {
+                  "id": "a76764e3-1a9c-4a5b-9725-d8d864cf0afd",
+                  "title": "Ransomware",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Un ransomware cifra los datos de las tablas de la base de datos, impidiendo que ésta misma pueda a ser usable.",
+                  "mitigation": "1.- Borrar la base de datos\n2.- Utilizar un respaldo de base de datos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "5"
+                },
+                {
+                  "id": "c131c08f-dfe8-4409-94eb-99784fde7772",
+                  "title": "Fallo en el registro de logs",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Un usuario malicioso logra atacar la base de datos sin dejar huella de quién, cómo, cuándo y donde fue el siniestro.",
+                  "mitigation": "1.- Utilizar un respaldo de base de datos\n2.- Administrar privilegios de usuario\n3.- Utilizar un log que permita identificar la IP y acción realizada.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "6"
+                },
+                {
+                  "id": "c2ac5529-7e92-4929-a949-9e981266f31b",
+                  "title": "Exposición de datos sensibles",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Los archivos de configuración, claves, variables de entorno, respaldo y datos registrados en la base de datos se encuentran en texto plano.",
+                  "mitigation": "1.- Cifrar los secretos, archivos de configuración y datos sensibles.\n2.- Restringir los permisos de lectura de un usuario.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "8"
+                },
+                {
+                  "id": "79479899-ee89-4238-952b-b5bee68a94f6",
+                  "title": "Alterar información de la base de datos",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un usuario malicioso cuenta con los permisos y acciones necesarias  para poder alterar la información de los datos almacenado.",
+                  "mitigation": "1.- Implementar la regla del mínimo privilegio.\n2.- Implementar un log que registre la actividad realizada en el sistema.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -934,20 +1405,20 @@
             ],
             "id": "efb5a8fe-78b5-432f-b7d2-bb8ab17395f8",
             "source": {
-              "x": 1150,
+              "x": 1230,
               "y": 200
             },
             "target": {
-              "x": 1190,
+              "x": 1270,
               "y": 370
             },
             "vertices": [
               {
-                "x": 1110,
+                "x": 1190,
                 "y": 240
               },
               {
-                "x": 1110,
+                "x": 1190,
                 "y": 340
               }
             ]
