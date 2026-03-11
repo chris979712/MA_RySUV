@@ -1,5 +1,5 @@
 {
-  "version": "2.5.0",
+  "version": "2.6.0",
   "summary": {
     "title": "Modelado de Amenazas del sistema RySUV",
     "owner": "Christopher Vasquez Zapata",
@@ -15,7 +15,7 @@
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "version": "2.5.0",
+        "version": "2.6.0",
         "cells": [
           {
             "position": {
@@ -163,13 +163,6 @@
                 "spoofing": 1,
                 "repudiation": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -484,8 +477,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -506,7 +498,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -515,7 +507,7 @@
                 {
                   "id": "da5bae7e-8967-46d7-aa95-f34f0be77350",
                   "title": "Man in the middle",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Information disclosure",
                   "description": "Un usuario mal intencionado es capaz de leer e interceptar las peticiones web entre el usuario y página web, con la finalidad de robar, leer o modificar información.",
@@ -529,7 +521,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 3,
+                "informationDisclosure": 4,
                 "denialOfService": 0
               }
             },
@@ -560,8 +552,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -582,7 +573,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -591,7 +582,7 @@
                 {
                   "id": "cd1c908c-f45c-4fae-88a7-322f5ee559fa",
                   "title": "Man in the middle",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Information disclosure",
                   "description": "Un usuario mal intencionado es capaz de leer e interceptar las peticiones web entre el usuario y página web, con la finalidad de robar, leer o modificar información.",
@@ -605,7 +596,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -620,21 +611,6 @@
             "target": {
               "cell": "baefeab5-2ee5-457d-becd-00b2b27f6f33",
               "port": "08a73c0f-7dbd-4e79-8123-205cede3369e"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             },
             "vertices": [
               {
@@ -651,8 +627,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -673,7 +648,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -682,7 +657,7 @@
                 {
                   "id": "4b042f57-057f-493c-b121-e3a84cd00ffb",
                   "title": "Man in the middle",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Un usuario malicioso intenta intervenir en las solicitudes realizadas entre el backend con la base de datos, exponiendo las peticiones realizadas para obtener información o alterarla.",
@@ -696,7 +671,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 4,
+                "informationDisclosure": 5,
                 "denialOfService": 0
               }
             },
@@ -727,8 +702,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -749,7 +723,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -758,7 +732,7 @@
                 {
                   "id": "45e6ecbe-0f1b-4844-9844-03f8e08f4659",
                   "title": "Man in the middle",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Un usuario malicioso intenta intervenir en las solicitudes realizadas entre el backend con la base de datos, exponiendo las peticiones realizadas para obtener información o alterarla.",
@@ -772,7 +746,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             },
@@ -1127,7 +1101,7 @@
                 {
                   "id": "3abe0e36-e9fe-4884-9cbf-5a62b30099d2",
                   "title": "Exposición de credenciales",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Los archivos de configuración, claves y variables de entorno se encuentran en texto plano.",
@@ -1166,7 +1140,7 @@
                 {
                   "id": "65b5ff20-4cf9-40b9-b2c5-ad57f3f0bc50",
                   "title": "Denegación de servicios",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Un usuario mal intencionado intenta realizar varias peticiones por minuto con la finalidad de tirar los servicios de la API Rest.",
@@ -1179,7 +1153,7 @@
                 {
                   "id": "a09311b2-d249-4185-97a6-c95021551022",
                   "title": "Ejecución de funcionalidades de alto privilegio",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Elevation of privilege",
                   "description": "Un usuario de bajo privilegio intenta ejecutar funciones de usuario de alto privilegio, con la finalidad de atentar contra la integridad del sistema.",
@@ -1194,9 +1168,9 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 2,
-                "denialOfService": 5,
-                "elevationOfPrivilege": 1
+                "informationDisclosure": 4,
+                "denialOfService": 6,
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -1340,7 +1314,7 @@
                 {
                   "id": "c131c08f-dfe8-4409-94eb-99784fde7772",
                   "title": "Fallo en el registro de logs",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Repudiation",
                   "description": "Un usuario malicioso logra atacar la base de datos sin dejar huella de quién, cómo, cuándo y donde fue el siniestro.",
@@ -1353,7 +1327,7 @@
                 {
                   "id": "c2ac5529-7e92-4929-a949-9e981266f31b",
                   "title": "Exposición de datos sensibles",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Los archivos de configuración, claves, variables de entorno, respaldo y datos registrados en la base de datos se encuentran en texto plano.",
@@ -1366,7 +1340,7 @@
                 {
                   "id": "79479899-ee89-4238-952b-b5bee68a94f6",
                   "title": "Alterar información de la base de datos",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Un usuario malicioso cuenta con los permisos y acciones necesarias  para poder alterar la información de los datos almacenado.",
@@ -1378,9 +1352,9 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "repudiation": 1,
-                "informationDisclosure": 1,
+                "tampering": 2,
+                "repudiation": 2,
+                "informationDisclosure": 2,
                 "denialOfService": 1
               }
             }
